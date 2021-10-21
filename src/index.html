@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <title>testSmile</title>
+</head>
+<body>
+  <main class="main">
+    <div class="main__container container">
+      <h6 class="main__title">
+        <span class="text-red">
+          H6
+          <span class="dots"></span>
+        </span>
+        Links and form elements
+      </h6>
+      <div class="main__inner">
+        <div class="main__left">
+          <form action="main__left-form"></form>
+
+          <ul class="main__left-form__list list">
+            <li><a class="list__link" href="#s">Default link</a></li>
+            <li><a class="list__link" href="#w">Active link</a></li>
+            <li><a class="list__link" href="#e">Visited link</a></li>
+          </ul>
+
+          <!-- SELECT -->
+
+          <div class="main__left-form-selection">
+
+            <select class="left-form__selection-select select">
+              <option></option>
+              <option class="options" value="1">First item</option>
+              <option class="options" value="2">Second item</option>
+              <option class="options" value="3">Third item</option>
+            </select>
+
+          </div>
+        </form>
+      </div>
+
+      <div class="main__right">
+        <form class="main__right-form">
+
+          <!-- CHECKBOX -->
+
+          <div class="main__right-form__choice">
+            <div class="right-form__checkbox right-form--margin checkbox">
+
+              <label class="checkbox__label">
+                <input class="checkbox__input" type="checkbox" name="checkbox-first">
+                <span class="checkbox__box checkbox__box--checkmark"></span>
+                <span>Default</span>
+              </label>
+
+              <label class="checkbox__label">
+                <input class="checkbox__input" type="checkbox" name="checkbox-second" checked>
+                <span class="checkbox__box checkbox__box--checkmark"></span>
+                <span>Checked</span>
+              </label>
+
+              <label class="checkbox__label">
+                <input class="checkbox__input" type="checkbox" name="checkbox-third" disabled>
+                <span class="checkbox__box checkbox__box--checkmark"></span>
+                <span>Disabled</span>
+              </label>
+
+            </div>
+
+            <!-- RADIO -->
+
+            <div class="right-form__radio right-form--margin checkbox">
+
+              <label class="checkbox__label">
+                <input class="checkbox__input" type="radio" name="radio" value="Default">
+                <span class="checkbox__box checkbox__box--radio"></span>
+                <span>Default</span>
+              </label>
+
+              <label class="checkbox__label">
+                <input class="checkbox__input" type="radio" name="radio" value="Checked" checked>
+                <span class="checkbox__box checkbox__box--radio"></span>
+                <span>Checked</span>
+              </label>
+
+              <label class="checkbox__label">
+                <input class="checkbox__input" type="radio" name="radio" value="Disabled" disabled>
+                <span class="checkbox__box checkbox__box--radio"></span>
+                <span>Disabled</span>
+              </label>
+
+            </div>
+          </div>
+
+          <!-- INPUT -->
+
+          <div class="right-form__input input">
+            <input class="input__main input__main--empty" type="text" name="empty" placeholder="Input">
+            <input class="input__main input__main--value" type="text" name="value" value="Text example">
+          </div>
+
+          <!-- BUTTON -->
+
+          <div class="right-form__btn btn">
+            <button class="btn__main btn__main--normal">Send</button>
+            <button class="btn__main btn__main--reverse">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+
+
+<script>
+$(function functionName() {
+  $('.select').select2({
+    placeholder: 'Select an option',
+    width: '290px',
+    minimumResultsForSearch: -1,
+    selectionCssClass: 'select__main',
+    dropdownCssClass: 'select__dropdown',
+  });
+})
+
+</script>
+
+</body>
+</html>

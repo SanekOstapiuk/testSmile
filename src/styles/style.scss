@@ -1,0 +1,355 @@
+@import 'fonts/fonts';
+@import 'variables/variables';
+
+@import 'reset';
+
+body{
+  color: $black;
+  font-size: 24px;
+  line-height: 1.5;
+  font-family: $font;
+  font-weight: 700;
+}
+
+.container{
+  max-width: 990px;
+  padding: 0 15px;
+  width: 100%;
+  margin: 0 auto
+}
+
+.text-red{
+  color: $red;
+  font-weight: 700;
+}
+
+.dots{
+  position: relative;
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  margin: 0 2px 0 1px;
+  background: $red;
+
+  &:before,
+  &:after{
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: $red;
+    top: -4px;
+  }
+
+  &:after{
+    top: -8px;
+  }
+}
+
+.main{
+  padding-top: 100px;
+
+  &__title{
+    font-size: 20px;
+    line-height: 2;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+
+  &__inner{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__left{
+    flex: 0 1 50%;
+    padding-left: 20px;
+  }
+
+  &__right{
+    flex: 0 1 50%;
+  }
+
+  &__left-form__list{
+    margin-bottom: 30px;
+  }
+
+  &__left-form__selection{
+    margin-bottom: 20px;
+  }
+
+  &__right-form{
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__right-form__choice{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 28px;
+  }
+}
+
+//LIST
+
+.list{
+  li {
+    margin-bottom: 5px;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  &__link{
+    font-weight: 700;
+    border-bottom: 2px solid $grey;
+    padding: 3px;
+    color: $black;
+    margin-bottom: 5px;
+
+    &:hover{
+      background-color: $grey;
+      transition: all 0.3s linear;
+    }
+    &:active{
+      border: none;
+    }
+    &:visited{
+      color: $grey;
+    }
+  }
+}
+
+// SELECT
+
+.select2-container .select__main{
+  height: auto;
+  padding-bottom: 10px;
+}
+
+.select2-container--default .select__main {
+  border: none;
+  border-radius: 0;
+  border-bottom: 2px solid black;
+}
+
+.select__dropdown{
+  border: none;
+  color: $grey;
+  border-bottom: $grey;
+}
+
+.select__dropdown .select2-results__option{
+  background: transparent;
+  border-bottom: 2px solid $grey;
+}
+
+.select__dropdown .select2-results__option--highlighted.select2-results__option--selectable{
+  color: $red;
+  border-bottom: 2px solid $red;
+  background: transparent;
+  transition: all 0.5s linear;
+}
+
+.select2-container--default.select2-container--open .select__main .select2-selection__arrow{
+  transform: rotate(45deg);
+  transition: all 0.1s linear;
+}
+
+.select__main .select2-selection__arrow{
+  position: relative;
+  transition: all 0.1s linear;
+  &:before,
+  &:after{
+    content: '';
+    position: absolute;
+    background-color: $black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:before{
+    width: 2px;
+    height: 10px;
+  }
+
+  &:after{
+    width: 10px;
+    height: 2px;
+  }
+}
+
+.select__main .select2-selection__arrow b{
+  display: none;
+}
+
+//  CHECKBOX
+
+.checkbox{
+  &__box{
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    height: 19px;
+    width: 19px;
+    background-color: $aqua;
+    border: none;
+  }
+
+  &__label {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 3px;
+    cursor: pointer;
+    font-size: 22px;
+    user-right-form: none;
+  }
+
+  &__input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  &__box:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  &__input:checked ~ &__box:after {
+    display: block;
+  }
+
+  &__label &__box--checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 4px;
+    height: 8px;
+    border: solid $blue;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  }
+
+  &__input:disabled ~ &__box{
+    background-color: $grey;
+  }
+
+  &__box--radio{
+    border-radius: 50%;
+
+    &:after{
+      width: 7px;
+      height: 7px;
+      background: $blue;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+// INPUT
+
+.input{
+  &__main{
+    font-size: 24px;
+    display:block;
+    line-height: 1.5;
+    border-bottom: 2px solid black;
+    font-weight: 700;
+    padding: 7px 0;
+    max-width: 290px;
+    width: 100%;
+  }
+
+  &__main--empty{
+    margin-bottom: 15px;
+  }
+
+  &__main--value{
+    margin-bottom: 30px;
+  }
+}
+
+//BTN
+
+.btn{
+  &__main{
+    display: inline-block;
+    text-align: center;
+    border: none;
+    padding: 17px 0;
+    margin-bottom: 15px;
+    max-width: 130px;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    transition: background 0.2s linear;
+    cursor: pointer;
+
+    &--normal{
+      background: $white;
+      border: 2px solid $blue;
+      color: $blue;
+      margin-right: 13px;
+      &:hover{
+        background-color: $blue;
+        color: $white;
+        transition: all 0.2s linear;
+      }
+    }
+
+    &--reverse{
+      background-color: $blue;
+      color: $white;
+      border: 2px solid $blue;
+      &:hover{
+        background: $white;
+        color: $blue;
+        transition: all 0.2s linear;
+      }
+    }
+  }
+}
+
+@media ($max-tablet) {
+  .main{
+    padding-top: 30px;
+
+    &__title{
+      margin-bottom: 15px;
+    }
+
+    &__left{
+      flex: 0 1 100%;
+      padding-left: 0;
+    }
+
+    &__right{
+      flex: 0 1 100%;
+    }
+
+    &__right-form__choice{
+      justify-content: space-between;
+      order: 1;
+      max-width: 300px;
+      width: 100%;
+    }
+  }
+
+  .btn{
+    order: 2;
+    &__main{
+      display: block;
+      max-width: 300px;
+    }
+  }
+};

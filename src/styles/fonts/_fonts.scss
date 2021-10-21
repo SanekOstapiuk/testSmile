@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'Marvel';
+    src: url('Marvel-Regular.eot');
+    src: local('Marvel'), local('Marvel-Regular'),
+        url('../fonts/Marvel-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Marvel-Regular.woff2') format('woff2'),
+        url('../fonts/Marvel-Regular.woff') format('woff'),
+        url('../fonts/Marvel-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Marvel';
+    src: url('Marvel-Italic.eot');
+    src: local('Marvel Italic'), local('Marvel-Italic'),
+        url('../fonts/Marvel-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Marvel-Italic.woff2') format('woff2'),
+        url('../fonts/Marvel-Italic.woff') format('woff'),
+        url('../fonts/Marvel-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Marvel';
+    src: url('Marvel-BoldItalic.eot');
+    src: local('Marvel Bold Italic'), local('Marvel-BoldItalic'),
+        url('../fonts/Marvel-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Marvel-BoldItalic.woff2') format('woff2'),
+        url('../fonts/Marvel-BoldItalic.woff') format('woff'),
+        url('../fonts/Marvel-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Marvel';
+    src: url('Marvel-Bold.eot');
+    src: local('Marvel Bold'), local('Marvel-Bold'),
+        url('../fonts/Marvel-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Marvel-Bold.woff2') format('woff2'),
+        url('../fonts/Marvel-Bold.woff') format('woff'),
+        url('../fonts/Marvel-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
