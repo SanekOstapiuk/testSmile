@@ -1,0 +1,358 @@
+@font-face {
+  font-family: "Marvel";
+  src: url("Marvel-Regular.eot");
+  src: local("Marvel"), local("Marvel-Regular"), url("../fonts/Marvel-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Marvel-Regular.woff2") format("woff2"), url("../fonts/Marvel-Regular.woff") format("woff"), url("../fonts/Marvel-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Marvel";
+  src: url("Marvel-Italic.eot");
+  src: local("Marvel Italic"), local("Marvel-Italic"), url("../fonts/Marvel-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/Marvel-Italic.woff2") format("woff2"), url("../fonts/Marvel-Italic.woff") format("woff"), url("../fonts/Marvel-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Marvel";
+  src: url("Marvel-BoldItalic.eot");
+  src: local("Marvel Bold Italic"), local("Marvel-BoldItalic"), url("../fonts/Marvel-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Marvel-BoldItalic.woff2") format("woff2"), url("../fonts/Marvel-BoldItalic.woff") format("woff"), url("../fonts/Marvel-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Marvel";
+  src: url("Marvel-Bold.eot");
+  src: local("Marvel Bold"), local("Marvel-Bold"), url("../fonts/Marvel-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Marvel-Bold.woff2") format("woff2"), url("../fonts/Marvel-Bold.woff") format("woff"), url("../fonts/Marvel-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+button {
+  border: none;
+  font-family: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+input {
+  font-family: inherit;
+  border: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  color: #000000;
+  font-size: 24px;
+  line-height: 1.5;
+  font-family: "Marvel";
+  font-weight: 700;
+}
+
+.container {
+  max-width: 990px;
+  padding: 0 15px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.text-red {
+  color: #ff0000;
+  font-weight: 700;
+}
+
+.dots {
+  position: relative;
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  margin: 0 2px 0 1px;
+  background: #ff0000;
+}
+.dots:before, .dots:after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: #ff0000;
+  top: -4px;
+}
+.dots:after {
+  top: -8px;
+}
+
+.main {
+  padding-top: 100px;
+}
+.main__title {
+  font-size: 20px;
+  line-height: 2;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.main__inner {
+  display: flex;
+  flex-wrap: wrap;
+}
+.main__left {
+  flex: 0 1 50%;
+  padding-left: 20px;
+}
+.main__right {
+  flex: 0 1 50%;
+}
+.main__left-form__list {
+  margin-bottom: 30px;
+}
+.main__left-form__selection {
+  margin-bottom: 20px;
+}
+.main__right-form {
+  display: flex;
+  flex-direction: column;
+}
+.main__right-form__choice {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 28px;
+}
+
+.list li {
+  margin-bottom: 5px;
+}
+.list li:last-child {
+  margin-bottom: 0;
+}
+.list__link {
+  font-weight: 700;
+  border-bottom: 2px solid #d7d7d7;
+  padding: 3px;
+  color: #000000;
+  margin-bottom: 5px;
+}
+.list__link:hover {
+  background-color: #d7d7d7;
+  transition: all 0.3s linear;
+}
+.list__link:active {
+  border: none;
+}
+.list__link:visited {
+  color: #d7d7d7;
+}
+
+.select2-container .select__main {
+  height: auto;
+  padding-bottom: 10px;
+}
+
+.select2-container--default .select__main {
+  border: none;
+  border-radius: 0;
+  border-bottom: 2px solid black;
+}
+
+.select__dropdown {
+  border: none;
+  color: #d7d7d7;
+  border-bottom: #d7d7d7;
+}
+
+.select__dropdown .select2-results__option {
+  background: transparent;
+  border-bottom: 2px solid #d7d7d7;
+}
+
+.select__dropdown .select2-results__option--highlighted.select2-results__option--selectable {
+  color: #ff0000;
+  border-bottom: 2px solid #ff0000;
+  background: transparent;
+  transition: all 0.5s linear;
+}
+
+.select2-container--default.select2-container--open .select__main .select2-selection__arrow {
+  transform: rotate(45deg);
+  transition: all 0.1s linear;
+}
+
+.select__main .select2-selection__arrow {
+  position: relative;
+  transition: all 0.1s linear;
+}
+.select__main .select2-selection__arrow:before, .select__main .select2-selection__arrow:after {
+  content: "";
+  position: absolute;
+  background-color: #000000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.select__main .select2-selection__arrow:before {
+  width: 2px;
+  height: 10px;
+}
+.select__main .select2-selection__arrow:after {
+  width: 10px;
+  height: 2px;
+}
+
+.select__main .select2-selection__arrow b {
+  display: none;
+}
+
+.checkbox__box {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  height: 19px;
+  width: 19px;
+  background-color: #22f8b9;
+  border: none;
+}
+.checkbox__label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 3px;
+  cursor: pointer;
+  font-size: 22px;
+  user-right-form: none;
+}
+.checkbox__input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkbox__box:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.checkbox__input:checked ~ .checkbox__box:after {
+  display: block;
+}
+.checkbox__label .checkbox__box--checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 4px;
+  height: 8px;
+  border: solid #0000ff;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+.checkbox__input:disabled ~ .checkbox__box {
+  background-color: #d7d7d7;
+}
+.checkbox__box--radio {
+  border-radius: 50%;
+}
+.checkbox__box--radio:after {
+  width: 7px;
+  height: 7px;
+  background: #0000ff;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.input__main {
+  font-size: 24px;
+  display: block;
+  line-height: 1.5;
+  border-bottom: 2px solid black;
+  font-weight: 700;
+  padding: 7px 0;
+  max-width: 290px;
+  width: 100%;
+  outline: none;
+}
+.input__main--empty {
+  margin-bottom: 15px;
+}
+.input__main--value {
+  margin-bottom: 30px;
+}
+
+.btn__main {
+  display: inline-block;
+  text-align: center;
+  border: none;
+  padding: 17px 0;
+  margin-bottom: 15px;
+  max-width: 130px;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 700;
+  transition: background 0.2s linear;
+  cursor: pointer;
+}
+.btn__main--normal {
+  background: #ffffff;
+  border: 2px solid #0000ff;
+  color: #0000ff;
+  margin-right: 13px;
+}
+.btn__main--normal:hover {
+  background-color: #0000ff;
+  color: #ffffff;
+  transition: all 0.2s linear;
+}
+.btn__main--reverse {
+  background-color: #0000ff;
+  color: #ffffff;
+  border: 2px solid #0000ff;
+}
+.btn__main--reverse:hover {
+  background: #ffffff;
+  color: #0000ff;
+  transition: all 0.2s linear;
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding-top: 30px;
+  }
+  .main__title {
+    margin-bottom: 15px;
+  }
+  .main__left {
+    flex: 0 1 100%;
+    padding-left: 0;
+  }
+  .main__right {
+    flex: 0 1 100%;
+  }
+  .main__right-form__choice {
+    justify-content: space-between;
+    order: 1;
+    max-width: 300px;
+    width: 100%;
+  }
+
+  .btn {
+    order: 2;
+  }
+  .btn__main {
+    display: block;
+    max-width: 300px;
+  }
+}
